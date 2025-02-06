@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Love</title>
+    <style>
+        body {
+            font-family: 'Courier New', monospace;
+            text-align: center;
+            background-color: #ffe6e6;
+            padding: 20px;
+            overflow: hidden;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: #fff0f5;
+            padding: 20px;
+            border-radius: 20px;
+            border: 2px dashed #ff1493;
+            box-shadow: 0px 0px 20px rgba(255, 105, 180, 0.5);
+            position: relative;
+            z-index: 10;
+        }
+        h1 {
+            color: #ff1493;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        .romantic-note {
+            font-size: 18px;
+            font-style: italic;
+            color: #d63384;
+            background: linear-gradient(145deg, #fff5f8, #ffe6eb);
+            padding: 15px;
+            border-radius: 15px;
+            line-height: 1.8;
+            box-shadow: 0px 0px 15px rgba(255, 105, 180, 0.4);
+        }
+        .image-container {
+            margin-top: 20px;
+        }
+        .image-container img {
+            max-width: 100%;
+            border-radius: 15px;
+            box-shadow: 0px 0px 20px rgba(255, 182, 193, 0.6);
+            border: 2px solid #ff1493;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); opacity: 1; }
+            50% { opacity: 0.8; }
+            100% { transform: translateY(-100vh); opacity: 0; }
+        }
+        .floating-heart, .floating-star, .floating-text {
+            position: absolute;
+            font-size: 24px;
+            animation: float 5s linear infinite;
+        }
+        .floating-text {
+            font-size: 30px;
+            font-weight: bold;
+            color: #ff69b4;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function createFloatingElement(symbol, className) {
+            const element = document.createElement('div');
+            element.textContent = symbol;
+            element.className = className;
+            element.style.left = Math.random() * 100 + 'vw';
+            element.style.top = '100vh';
+            element.style.animationDuration = (Math.random() * 3 + 3) + 's';
+            document.body.appendChild(element);
+            setTimeout(() => document.body.removeChild(element), 5000);
+        }
+        setInterval(() => createFloatingElement('❤️', 'floating-heart'), 500);
+        setInterval(() => createFloatingElement('⭐', 'floating-star'), 700);
+        setInterval(() => createFloatingElement('My ISHA', 'floating-text'), 1000);
+    </script>
+    <div class="container">
+        <h1>Happy Anniversary, My Love! ❤️</h1>
+        <p class="romantic-note">7th February!!! yes! yes! yes! The best day of my life and you know the reason? Yes the reason is youu ISHA ji because I got my world that day and see 2 years have already passed. Aisa lagta hai ki bas abhi mile haii bethe hai stairs pe school ground me ek dusre ko dekh rhe hai nervously, kya din tha yaarrr. 1 more year passed aur abhi to aane waale boht saal baaki haii ab jeevan bitana hai aapke saath. Yaad hai pichle saal hamne board exams me bhaisaab saathme money heist dekhi thi lol! Fir aapka mujhe raaste me milna ufff jab aap bag pahenke nikalti hoo esa lagta hai koi cute si disney princess haii jo jaa rhi hai araam se. Wese abhi kehne ko to boht kuch hai par website thori barhi banani paregi aur mujhe jyada aata nhi hai😅. I just want to say I LOVE YOUU♾️❣️ and I promise ek din aapko dulhan banake lee jaunga😁</p>
+        <div class="image-container">
+            <img src="Favorite.jpeg" alt="A Special Memory">
+        </div>
+    </div>
+</body>
+</html>
